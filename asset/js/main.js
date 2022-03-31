@@ -22,9 +22,12 @@ var app = new Vue(
             ],
             indexBe: 0,
         },
+        created() {
+            // imgCarosello.addEventListener("mouseout", setInterval(this.aheadBtn, 2000)); 
+            // imgCarosello.addEventListener("mouseout", this.aheadBtn); 
+        },
         methods: {
             aheadBtn: function() {
-                this.indexBe;
                 if (this.indexBe < 2) {
                     this.indexBe++;
                     return this.indexBe;
@@ -33,7 +36,6 @@ var app = new Vue(
                 return this.indexBe;
             },
             beforeBtn: function() {
-                this.indexBe
                 if (this.indexBe > 0) {
                     this.indexBe--;
                     return this.indexBe;
@@ -43,4 +45,4 @@ var app = new Vue(
             },
         }
     }
-)
+);

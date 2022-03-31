@@ -16,9 +16,15 @@
 
         <div id="main-container" class="d-flex align-items-center justify-content-around">
             <button @click="beforeBtn()">1</button>
-            <img :src="immagini[indexBe]" alt="">
+            <div>
+                <img id="img-carosello" :src="immagini[indexBe]" alt="">
+            </div>
             <button @click="aheadBtn()">2</button>
         </div>
+
+        <div id="pallinoUno" class="pallino"></div>
+        <div id="pallinoDue" class="pallino"></div>
+        <div id="pallinoTre" class="pallino"></div>
 
     </div>
 

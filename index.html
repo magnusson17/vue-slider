@@ -14,19 +14,36 @@
     
     <div id="root">
 
-        <div id="main-container" class="d-flex align-items-center justify-content-around">
-            <button @click="beforeBtn()">1</button>
-            <div>
-                <img id="img-carosello" :src="immagini[indexBe]" alt="">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+
+                <div class="col-2 text-center">
+                    <i @click="beforeBtn()" class="fa-solid fa-caret-left fs_4em"></i>
+                </div>
+                <div class="col-8 text-center">
+                    <img class="img-fluid h_90vh" id="img-carosello" :src="immagini[indexBe]" alt="">
+                </div>
+                <div class="col-2 text-center">
+                    <i @click="aheadBtn()" class="fa-solid fa-caret-right fs_4em"></i>
+                </div>
+
             </div>
-            <button @click="aheadBtn()">2</button>
+
+            <div class="col-12 d-flex justify-content-center">
+                <div
+                v-for="(element, index) in immagini"
+                id="pallini-div"
+                class="mx-3"
+                @click="palliniFunction(index)"
+                :class="(index == indexBe) ? 'pallino_active' : '' "><i class="fa-solid fa-circle fs_2em"></i>
+                </div>
+            </div>
         </div>
 
-        <div id="pallinoUno" class="pallino"></div>
-        <div id="pallinoDue" class="pallino"></div>
-        <div id="pallinoTre" class="pallino"></div>
+        <!-- <div id="main-container" class="d-flex align-items-center justify-content-around h_100vh">
+        </div> -->
 
-    </div>
+        
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>

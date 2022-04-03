@@ -24,24 +24,24 @@ var app = new Vue(
         },
         created() {
             // imgCarosello.addEventListener("mouseout", setInterval(this.aheadBtn, 2000)); 
-            // imgCarosello.addEventListener("mouseout", this.aheadBtn); 
+            // imgCarosello.addEventListener("mouseout", this.aheadBtn);
+            // setInterval(this.aheadBtn, 3000);
         },
         methods: {
             aheadBtn: function() {
-                if (this.indexBe < 2) {
-                    this.indexBe++;
-                    return this.indexBe;
+                this.indexBe++;
+                if (this.indexBe > (this.immagini.length - 1)) {
+                    this.indexBe = 0;
                 }
-                this.indexBe = 0;
-                return this.indexBe;
             },
             beforeBtn: function() {
-                if (this.indexBe > 0) {
-                    this.indexBe--;
-                    return this.indexBe;
+                this.indexBe--;
+                if (this.indexBe < 0) {
+                    this.indexBe = (this.immagini.length - 1);
                 }
-                this.indexBe = 2;
-                return this.indexBe;
+            },
+            palliniFunction: function(i) {
+                this.indexBe = i
             },
         }
     }

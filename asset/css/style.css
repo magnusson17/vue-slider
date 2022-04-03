@@ -2,8 +2,8 @@
     background-color: antiquewhite;
 }
 
-#main-container {
-    height: 100vh;
+.h_90vh {
+    height: 90vh;
 }
 
 .pallino {
@@ -14,5 +14,13 @@
 }
 
 .pallino_active {
-    background-color: blue;
+    color: blue;
+}
+
+.fs_4em {
+    font-size: 4em;
+}
+
+.fs_2em {
+    font-size: 2em;
 }

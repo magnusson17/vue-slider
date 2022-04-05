@@ -25,7 +25,7 @@ var app = new Vue(
         created() {
             // imgCarosello.addEventListener("mouseout", setInterval(this.aheadBtn, 2000)); 
             // imgCarosello.addEventListener("mouseout", this.aheadBtn);
-            // setInterval(this.aheadBtn, 3000);
+            setInterval(this.aheadBtn, 3000);
         },
         methods: {
             aheadBtn: function() {
